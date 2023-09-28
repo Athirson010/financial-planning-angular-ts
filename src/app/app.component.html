@@ -1,0 +1,5 @@
+<h1>{{ counter }}</h1>
+<button (click)="counter = counter + 1">Incrementar</button>
+<button (click)="counter = counter - 1">Decrementar</button>
+
+<app-display-contador [counter] = "counter"></app-display-contador>
