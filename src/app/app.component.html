@@ -1,5 +1,9 @@
-<h1>{{ counter }}</h1>
-<button (click)="counter = counter + 1">Incrementar</button>
-<button (click)="counter = counter - 1">Decrementar</button>
+<!--
+<h1>{{ counter$ | async }}</h1>
 
-<app-display-contador [counter] = "counter"></app-display-contador>
+
+<button (click)="incrementaContador()">Incrementar</button>
+<button (click)="decrementaContador()">Decrementar</button>
+<app-display-contador></app-display-contador>
+-->
+<router-outlet></router-outlet>
