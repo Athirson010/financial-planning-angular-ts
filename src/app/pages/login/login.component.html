@@ -4,14 +4,14 @@
   <mat-card-content class="card-right">
     <mat-card-content>
     <div mat-card-image class="imagem-logo"></div>
-    <form class="login-form">
+    <form class="login-form" [formGroup]="loginForm">
       <div class="flex-row">
-        <app-input [id]="'email'" [placeholder]="'Digite seu e-mail'" [type]="'email'"/>
+        <app-input [control]="loginForm.get('email')" name="email" placeholder="Digite seu e-mail" type="email"/>
       </div>
       <div class="flex-row">
-        <app-input [id]="'senha'" [placeholder]="'Digite sua senha'" [type]="'password'"/>
+        <app-input [control]="loginForm.get('senha')" placeholder="Digite sua senha" type="password"/>
       </div>
-      <app-button [id]="'login'" [valor]="'Entrar'" />
+      <app-button (click)="logar()" [id]="'login'" [valor]="'Entrar'" />
     </form>
     </mat-card-content>
   </mat-card-content>

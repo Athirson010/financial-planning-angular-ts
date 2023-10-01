@@ -9,7 +9,7 @@
 }
 .image-left{
     flex: 0 0 50%;
-    background-image: url('../../../../assets/cofrinho-lateral-com-moedas-e-notas.jpg');
+    background-image: url('src/assets/cofrinho-lateral-com-moedas-e-notas.jpg');
     background-size: cover;
     background-position: unset;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
   background-position: unset;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../../../../assets/logo3.png');
+  background-image: url('src/assets/logo3.png');
 }
 .card-right{
     flex: 0 0 50%;

@@ -1,4 +1,6 @@
+import { AnimateTimings } from '@angular/animations';
 import { Component, Input } from '@angular/core';
+import { AbstractControl, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -7,15 +9,14 @@ import { Component, Input } from '@angular/core';
 })
 export class InputComponent {
 
-  @Input()
-  label: string | null = ''
-  
-  @Input()
-  id: string = '';
-  
-  @Input()
-  placeholder: string= '';
+  @Input() 
+  control: AbstractControl | any;
 
   @Input()
-  type: string = '';
+  placeholder: string =''
+
+  @Input()
+  type: string =''
+
+  constructor() { }
 }

@@ -1,12 +1,26 @@
 
 import {Component} from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { LoginDTO } from 'src/app/types/autenticacaoType';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+ 
+
+export class LoginComponent {  
+
+  public loginForm: FormGroup = this.formBuilder.group({
+    email: [''],
+    senha: ['']
+  })
+
+  constructor(private formBuilder: FormBuilder) {}
+
+
+  logar(){
+   console.log(this.loginForm)
+  };
 }
