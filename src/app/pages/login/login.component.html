@@ -7,11 +7,12 @@
     <form class="login-form" [formGroup]="loginForm">
       <div class="flex-row">
         <app-input [control]="loginForm.get('email')" name="email" placeholder="Digite seu e-mail" type="email"/>
+        <span *ngIf="loginForm.get('email')?.errors">Digite um e-mail valido</span>
       </div>
       <div class="flex-row">
         <app-input [control]="loginForm.get('senha')" placeholder="Digite sua senha" type="password"/>
       </div>
-      <app-button (click)="logar()" [id]="'login'" [valor]="'Entrar'" />
+      <app-button [disabled]="loginForm.invalid" (click)="logar()" [id]="'login'" [valor]="'Entrar'" />
     </form>
     </mat-card-content>
   </mat-card-content>

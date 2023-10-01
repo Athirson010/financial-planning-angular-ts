@@ -13,7 +13,7 @@ import { LoginDTO } from 'src/app/types/autenticacaoType';
 export class LoginComponent {  
 
   public loginForm: FormGroup = this.formBuilder.group({
-    email: [''],
+    email: ['', [Validators.email, Validators.minLength(1)]],
     senha: ['']
   })
 
@@ -21,6 +21,7 @@ export class LoginComponent {
 
 
   logar(){
+    console.log('testeeeeeeeeeee')
    console.log(this.loginForm)
   };
 }
