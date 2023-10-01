@@ -1,0 +1,26 @@
+
+.submit {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  cursor: pointer;
+  background-color: #44c767;
+  border: 0;
+  color: #f1f8f8 !important;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(black, 0.2);
+}
+
+.submit:hover {
+  background-color: #5cbf2a;
+}
+.submit:active {
+  position: relative;
+  top: 1px;
+}
+
+::placeholder {
+  color: -gray;
+}

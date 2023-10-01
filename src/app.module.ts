@@ -13,12 +13,17 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule} from '@angula
 import {NgIf} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import { ButtonComponent } from './app/components/button/button.component';
+import { InputComponent } from './app/components/input/input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayContadorComponent,
-    LoginComponent
+    LoginComponent,
+    ButtonComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -27,11 +32,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     StoreModule.forRoot({app: appReducer}),
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    MatCardModule,
     FormsModule,
-     MatFormFieldModule,
-      MatInputModule,
-       ReactiveFormsModule,
-        NgIf
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    NgIf
   ],
   providers: [],
   bootstrap: [AppComponent]
