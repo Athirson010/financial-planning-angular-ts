@@ -1,20 +1,39 @@
-
 <mat-card class="card-container">
   <div mat-card-image class="image-left"></div>
   <mat-card-content class="card-right">
     <mat-card-content>
-    <div mat-card-image class="imagem-logo"></div>
-    <form class="login-form" [formGroup]="loginForm">
-      <div class="flex-row">
-        <app-input [control]="loginForm.get('email')" name="email" placeholder="Digite seu e-mail" type="email"/>
-        <span *ngIf="loginForm.get('email')?.errors">Digite um e-mail valido</span>
-      </div>
-      <div class="flex-row">
-        <app-input [control]="loginForm.get('senha')" placeholder="Digite sua senha" type="password"/>
-      </div>
-      <app-button [disabled]="loginForm.invalid" (click)="logar()" [id]="'login'" [valor]="'Entrar'" />
-    </form>
+      <div mat-card-image class="imagem-logo"></div>
+      <form class="login-form" [formGroup]="loginForm">
+        <div class="flex-row">
+          <app-input
+            [control]="loginForm.get('email')"
+            name="email"
+            placeholder="Digite seu e-mail"
+            type="email"
+            [ngClass]="{'app-input-error': loginForm.get('email')?.errors }"
+          />
+          <span *ngIf="loginForm.get('email')?.errors"
+            >Digite um e-mail valido</span
+          >
+        </div>
+        <div class="flex-row">
+          <app-input
+            [control]="loginForm.get('senha')"
+            placeholder="Digite sua senha"
+            type="password"
+            [ngClass]="{'app-input-error': loginForm.get('senha')?.errors }"
+          />
+          <span *ngIf="loginForm.get('senha')?.errors"
+          >É necessario ter no minimo ter 8 caracteres</span
+        >
+        </div>
+        <app-button
+          [disabled]="loginForm.invalid"
+          (click)="logar()"
+          [id]="'login'"
+          [valor]="'Entrar'"
+        />
+      </form>
     </mat-card-content>
   </mat-card-content>
 </mat-card>
-

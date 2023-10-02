@@ -9,12 +9,11 @@ import { LoginDTO } from 'src/app/types/autenticacaoType';
   styleUrls: ['./login.component.css']
 })
  
-
 export class LoginComponent {  
 
   public loginForm: FormGroup = this.formBuilder.group({
     email: ['', [Validators.email, Validators.minLength(1)]],
-    senha: ['']
+    senha: ['', [Validators.minLength(8)]]
   })
 
   constructor(private formBuilder: FormBuilder) {}
